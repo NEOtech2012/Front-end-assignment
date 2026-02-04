@@ -1,0 +1,87 @@
+:root {
+    --primary: #00d4ff;
+    --dark: #121212;
+    --card-bg: #1e1e1e;
+    --text: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--dark);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--primary); }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: white; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+    background-size: cover;
+}
+
+.cta-btn {
+    background: var(--primary);
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Product Grid */
+.category-section { padding: 50px 5%; }
+.section-title { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 30px; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover { transform: translateY(-10px); border: 1px solid var(--primary); }
+
+.product-card img { max-width: 100%; border-radius: 10px; height: 200px; object-fit: contain; }
+
+.price { color: var(--primary); font-size: 1.2rem; font-weight: bold; }
+
+.buy-btn {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.buy-btn:hover { background: var(--primary); color: black; }
